@@ -9,6 +9,7 @@
 #include <stdlib.h>
 int main(){
 volatile int *trise = (volatile int*) 0xbf886100;
+    //porte must be at an adress 4*4 below trise
     volatile int *porte = (volatile int*) 0xbf88611f;
     volatile int *LED = (volatile int*) 0xbf886100;
     *trise &= ~0xff;
